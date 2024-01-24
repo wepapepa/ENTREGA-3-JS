@@ -12,7 +12,7 @@ function addTask() { //working, i need to add an if else??
     }
 
     const tasks = getTasks();
-    tasks.push({ content: taskInput.value, done: false });
+    tasks.push({ content: checkbox + taskInput.value, done: false });
 
     saveTasks(tasks);
     renderTasks(tasks);
@@ -55,7 +55,9 @@ function loadTasks() { //working
     renderTasks(tasks);
 }
 
-taskElement.addEventListener("click", () => { //fix this i dont know why it isnt working :(
+let checkbox = document.getElementById("checkbox");
+
+checkbox.addEventListener("click", () => { //fix this i dont know why it isnt working :(
     Swal.fire({
     title: "Tarea completada!",
     text: "Felicidades rockstar!",
