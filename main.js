@@ -37,7 +37,7 @@ function renderTasks(tasks) {
         taskElement.onclick = () => toggleTaskDone(index);
         if (task.done) {
             taskElement.style.textDecoration = "line-through";
-            
+            //do i add an else function???
         }
         listElement.appendChild(taskElement);
     });
