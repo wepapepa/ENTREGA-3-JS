@@ -7,12 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
 function addTask() { //working, i need to add an if else??
     const taskInput = document.getElementById("newTask");
     if (taskInput.value.trim() === "") {
-        alert("Por favor, escribe una tarea.");
-        return;
+        tasks.push === false;
     }
 
     const tasks = getTasks();
-    tasks.push({ content: checkbox + taskInput.value, done: false });
+    tasks.push({ content: taskInput.value, done: false });
     //tasks.push({ content: checkbox + taskInput.value, done: false }); for the checkbox appearance
 
     saveTasks(tasks);
@@ -36,10 +35,8 @@ function renderTasks(tasks) {
         const taskElement = document.createElement("li");
         taskElement.textContent = task.content;
         taskElement.onclick = () => toggleTaskDone(index);
-        if (task.done) {
-            taskElement.style.textDecoration = "line-through";
-            //do i add an else function???
-        }
+
+        task.done ? taskElement.style.textDecoration = "line-through" : taskElement.style.textDecoration = "none" ;
         listElement.appendChild(taskElement);
     });
 }
