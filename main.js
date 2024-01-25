@@ -6,9 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function addTask() { //working, i need to add an if else??
     const taskInput = document.getElementById("newTask");
-    if (taskInput.value.trim() === "") {
-        tasks.push === false;
-    }
+    taskInput.value.trim() === "" ? tasks.push === false : tasks.push === true ;
 
     const tasks = getTasks();
     tasks.push({ content: taskInput.value, done: false });
