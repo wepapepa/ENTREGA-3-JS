@@ -1,20 +1,28 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Kanit;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: pink;
 }
 
 .container {
     width: 300px;
     text-align: center;
+    background-color: rgb(231, 98, 120);
+    border-radius: 10px;
+}
+
+button {
+    background-color: rgb(247, 181, 247);
+    border-color: white;
+    font-family: Kanit;
 }
 
 #taskList {
     list-style: none;
-    padding: 0;
+    padding: 10px 10px 10px 10px;
 }
 
 #taskList li {
